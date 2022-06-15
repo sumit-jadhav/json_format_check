@@ -1,0 +1,30 @@
+body {
+  margin: 1;
+  background-color: rgb(170, 212, 87);
+}
+
+.container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  align-items: center;
+
+}
+
+.text-area {
+  background-color: aliceblue;
+  width: 100vh;
+  height: 100vh;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-family: monospace;
+}
+
+button {
+  background-color: aqua;
+  padding: 15px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
