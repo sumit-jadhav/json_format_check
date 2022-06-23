@@ -1,6 +1,7 @@
 #npx install
-#npm install --save react-json-view
-react json is been used to display output in json format
+#npm i jason-formatter
 
-and for valid json object try block is used
+jason(your text)
+the key require double quotes so these is not complete solution
+
 #npm start

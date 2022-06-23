@@ -1,19 +1,25 @@
 import React from "react"
+import { jason } from "jason-formatter"
+
 import { useState } from "react"
-import ReactFormate from "./ReactFormate"
-// JSON.stringify({ name: "sumit" }
-// {setValue(!value)}
 
 const Output = () => {
   const [text, setText] = useState()
-  const [list, setList] = useState([])
-  const [value, setValue] = useState(false)
-  const handleOnChange = async () => {
-    // console.log(text)
-    setList(text)
-    setValue(!value)
+
+  const handleOnChanges = () => {
+    try {
+      var b = JSON.parse(text)
+      if (typeof b === "object") console.log("is valid json object")
+    } catch {
+      alert("not a json object")
+      return false
+    }
+    const a = jason(text)
+    console.log(a, typeof a)
+    console.log(text)
+    setText(a)
   }
-  // setValue(false)
+
   return (
     <>
       <textarea
@@ -24,11 +30,12 @@ const Output = () => {
         placeholder="Enter your JSON here..."
       ></textarea>
       <div className="controls">
-        <button onClick={handleOnChange}>submit</button>
+        <button onClick={handleOnChanges}>submit</button>
       </div>
       <div className="output">
-        <h1>output</h1>
-        {value && <ReactFormate text={list} />}
+        {/* <h1>output</h1> */}
+
+        {/* {value &&  <ReactFormate text={list} />} */}
       </div>
     </>
   )
